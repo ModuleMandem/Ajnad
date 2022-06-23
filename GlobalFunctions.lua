@@ -1,7 +1,7 @@
 
 GlobalFunctions = {}
 local Global = (getgenv and getgenv()) or _G
-if not Global.FlingPart then Global.FlingPart = "HumanoidRootPart" end
+if not Global.FlingPart then Global.FlingPart = "Left Leg" end
 if not Global.Noclip then Global.Noclip = true end
 --reanimate by MyWorld#4430 discord.gg/pYVHtSJmEY
 local Vector3_101 = Vector3.new(1, 0, 1)
