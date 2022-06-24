@@ -355,21 +355,6 @@ game:GetService("RunService").Heartbeat:Connect(function()
 	if Mus and Mus.Parent~=t then Instance.Remove(Mus) Mus=Sound(Songs[SongPos][1],Songs[SongPos][3],Songs[SongPos][2],t,100,5,true) Mus.TimePosition=TimePos end
 	Mus.SoundId,Mus.Pitch,Mus.Volume,Mus.Looped,Mus.Name,Mus.Playing="rbxassetid://"..Songs[SongPos][1],Songs[SongPos][2],Songs[SongPos][3],true,"VMus",not Muted
 	TimePos=Mus.TimePosition
-	TP.Inside.Color=hsv((tick()/5)%1,.4,1)
-	TP.Outline.Color=hsv((tick()/5)%1,.7,1)
-	TP.Outline.Light.Color=hsv((tick()/5)%1,.4,1)
-	TP.Blade.Beams.Color=cs(TP.Outline.Color)
-	TP.Inside.Trail1.Color=cs(TP.Outline.Color)
-	TP.Inside.Trail2.Color=cs(TP.Outline.Color)
-	TP.Inside.Trail3.Color=cs(TP.Outline.Color)
-	for i,v in pairs(Swords) do
-		v[1].Color=hsv((tick()/5+i/10)%1,.7,1)
-		v[1].Trail1.Color=cs(v[1].Color)
-		v[1].Trail2.Color=cs(v[1].Color)
-		v[1].Trail3.Color=cs(v[1].Color)
-		v[1].Glow.PE.Color=cs(v[1].Color)
-		v[1].Light.Color=hsv((tick()/5+i/10)%1,.4,1)
-	end
 	if Mus.TimeLength-Mus.TimePosition<.5 and Mus.IsLoaded then
 		TimePos=0
 		Mus.TimePosition=0
