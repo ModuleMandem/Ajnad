@@ -5,7 +5,7 @@ local CFrame=setmetatable({Angles=function(Arg1,Arg2,Arg3,Angles) if not Angles 
 local Instance=setmetatable({new=function(type,args) local instance=Instance.new(type) if args then if string.lower(typeof(args)) == "instance" then instance.Parent=args elseif string.lower(typeof(args))=="table" then for i,v in pairs(args) do pcall(function() instance[i]=v end) end end end return instance end,Remove=function(Instance_,Time) if string.lower(typeof(Instance_))=="instance" then game:GetService("Debris"):AddItem(Instance_,Time or 0) elseif string.lower(typeof(Instance_))=="table" then table.foreach(Instance_,function(_,v) game:GetService("Debris"):AddItem(v,Time or 0) end) end end},{__index=Instance,})
 local Player,UIS,Mouse=game:GetService("Players").LocalPlayer,game:GetService("UserInputService")
 Mouse=Player:GetMouse()
-local Rem=script.Input
+local Rem=script.Scripts.Input
 local InfoRef=Rem.InfoRef
 local Values=script.Values
 local HeadFollow=(Values.HeadFollow or{Value=false}).Value
